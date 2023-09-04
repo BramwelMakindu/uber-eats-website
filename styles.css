@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body{
+    position: relative;
+}
+
+body.active{
+    overflow-y: hidden;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background: rgba(53, 52, 52, 0.7);
+    display: none;
+}
+
+.overlay.active{
+    display: block;
+}
+
+
+header{
+    background: url(images/uber-bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar-div{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-div.active{
+    background: white;
+    box-shadow: 2px 4px 8px rgba(0,0,0,.3);
+}
+
+.navbar{
+    width: 93vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-bars i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar-right{
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-right button{
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0,0,0,.3);
+}
+
+
+.signup-btn, .side-signup{
+    background: black;
+    color: white;
+    transition: opacity .3s;
+}
+
+.signup-btn:hover, .side-signup:hover{
+    opacity: .7;
+}
+
+.side-login, .login-btn{
+    transition: background-color .3s;
+}
+
+.side-login:hover, .login-btn:hover{
+    background-color: lightgray;
+}
+
+.order-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-div{
+    width: 93vw;
+}
+
+.order-div h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.delivery-details{
+    display: flex;
+}
+
+.input-div{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: white;
+}
+
+.input-div i{
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.input-div input{
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 500;
+}
+
+.delivery-time{
+    background: white;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.deliver-now{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.deliver-now p i{
+    margin-right: 10px;
+}
+
+.deliver-now p{
+    margin-right: 10px;
+}
+
+.find-food{
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: opacity .3s;
+}
+
+.find-food:hover{
+    opacity: .8;
+}
+
+.order-text{
+    margin-top: 1rem;
+}
+
+.order-text p{
+    font-size: 14px;
+}
+
+.order-text p a{
+    color: black;
+    font-weight: 500;
+}
+
+.sidebar{
+    width: 25%;
+    left: -50%;
+    position: fixed;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 20;
+    transition: .4s;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-top button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar-top ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sidebar-top ul li{
+    transition: 0.3s;
+}
+
+.sidebar-top ul li:hover{
+    transform: scale(1.05);
+    color: green;
+}
+
+.sidebar-top ul li:hover a{
+    color: green;
+}
+
+.sidebar-top ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.advert{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.advert img{
+    width: 60px;
+}
+
+.advert span{
+    font-weight: 500;
+}
+
+.side-btns{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.side-btns button{
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.side-btns button i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+/*----------middle-section--------*/
+
+#middle-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-section-div{
+    width: 93vw;
+    margin-top: 5rem;
+}
+
+.middle-section-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-div-img{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 250px;
+}
+
+.info-div-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-div-details h2{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.info-div-details a{
+    color: black;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.map-div{
+    margin-top: 5rem;
+}
+
+.map-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-header h2{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.map-header a{
+    color: black;
+    font-size: 15px;
+}
+
+.map{
+    width: 100%;
+    height: 400px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/*----------countries-section------*/
+
+#countries-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.countries-div{
+    width: 93vw;
+}
+
+.countries-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.countries-header h2{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.countries-header a{
+    color: black;
+    font-size: 15px;
+}
+
+.countries{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.countries ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.countries ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#quick-links-section{
+    width: 100%;
+    display: flex;
+    padding: 5rem 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+.quick-links-div{
+    width: 93vw;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.quck-links-left{
+    display: flex;
+    gap: 1rem;
+}
+
+.quck-links-left div{
+    width: 150px;
+    cursor: pointer;
+}
+
+.quck-links-left div img{
+    width: 100%;
+}
+
+.quck-links-right{
+    display: flex;
+    gap: 4rem;
+}
+
+.quck-links-right ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.quck-links-right ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.footer{
+    width: 93vw;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.social-links{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-links i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.footer-right-top{
+    display: flex;
+    gap: 1.5rem;
+    align-items: end;
+    margin-bottom: 1rem;
+}
+
+.footer-right-top ul{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.footer-right-top a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-right-bottom p{
+    font-size: 14px;
+}
+
+.footer-right-bottom p a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 850px) {
+    .navbar{
+        align-items: unset;
+    }
+
+    .navbar-right{
+        display: none;
+    }
+
+    .order-div h1{
+        font-size: 7vw;
+    }
+
+    .delivery-details{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-div{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .delivery-time{
+        width: 100%;
+        margin: unset;
+        padding: 15px 10px;
+        border-radius: 5px;
+        
+    }
+
+    .find-food{
+        padding: 15px 10px;
+    }
+
+    .order-text p{
+        font-size: 2.7vw;
+    }
+
+    .middle-section-top{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-div-details h2{
+        font-size: 3vw;
+    }
+    
+    .info-div-details a{
+        font-size: 2vw;
+    }
+
+    .sidebar{
+        width: 50%;
+        left: -60%;
+    }
+
+    .map-header, .countries-header{
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .countries{
+        width: 100%;
+    }
+
+    .countries ul{
+        gap: 10px;
+    }
+
+    .countries ul li a{
+        font-size: 2.8vw;
+    }
+
+    .quick-links-div{
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .quck-links-left{
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .quck-links-right{
+        flex-direction: column;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: unset;
+        gap: 2rem;
+        padding: 20px 0;
+    }
+
+    .social-links i{
+        font-size: 25px;
+    }
+
+    .social-links{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-right-top{
+        flex-direction: column;
+        width: 100%;
+        align-items: unset;
+    }
+
+    .footer-right-top ul{
+        flex-direction: column;
+    }
+
+    .footer-right-bottom p{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    header{
+        background: url(images/small-bg.webp);
+        background-position: 10% 75%;
+    }
+
+    .sidebar{
+        width: 60%;
+    }
+
+    .advert img{
+        width: 10vw;
+    }
+
+    .advert span{
+        font-size: 3vw;
+    }
+
+    .side-btns i{
+        font-size: 14px;
+    }
+
+    .side-btns button{
+        padding: 10px;
+    }
+
+    .middle-section-top{
+        grid-template-columns: 1fr;
+    }
+
+    .info-div-details h2{
+        font-size: 4vw;
+    }
+    
+    .info-div-details a{
+        font-size: 2.5vw;
+    }
+}
